@@ -1,2 +1,41 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+  background-image: url("background.jpg");
+
+  .wrapper {
+    width: 98%;
+    margin: 0 auto;
+
+    #brand {
+      a{
+        left: 10px;
+        font-size: 25px;
+        color: red;
+      }
+      .space{
+        width: 500px;
+      }
+    }
+
+    .form-user{
+      margin: 0 auto;
+      padding: 20px;
+      width: 400px;
+      border-radius: 10px;
+
+      #text-error{
+        font-size: 10px;
+      }
+    }
+    #main{
+      width: 70%;
+      height: 700px;
+    }
+
+    .footer{
+      clear: both;
+    }
+  }
+}
