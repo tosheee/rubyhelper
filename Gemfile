@@ -16,6 +16,8 @@ gem 'jbuilder', '~> 2.0'
 
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'devise', '~> 3.5', '>= 3.5.6'
+
 gem 'bootstrap-sass', '3.2.0.2'
 gem 'autoprefixer-rails', '~> 6.3', '>= 6.3.1'
 
