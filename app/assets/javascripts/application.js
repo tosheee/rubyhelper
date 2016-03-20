@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 50) {
+        $('.navbar.navbar-default').addClass('fixed');
+    } else {
+        $('.navbar.navbar-default').removeClass('fixed');
+    }
+});

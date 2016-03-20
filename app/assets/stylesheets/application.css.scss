@@ -2,11 +2,19 @@
 @import "bootstrap";
 
 body{
-  background-image: url("background.jpg");
+  #top-box{
+    margin: 0 auto;
+    height: 20px;
+    background-color: #FF4A02;
+  }
 
   .wrapper {
-    width: 98%;
     margin: 0 auto;
+    .navbar.navbar-default{
+      display:block;
+      background-color: #009D23;
+
+    }
 
     #brand {
       a{
