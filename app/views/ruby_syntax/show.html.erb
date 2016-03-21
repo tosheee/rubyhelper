@@ -1,0 +1,22 @@
+<div class="main-content">
+
+  <div class="nav-vertical">
+    <%= render 'nav_vertical'%>
+  </div>
+
+  <div class="central-main-content">
+    <p id="notice"><%= notice %></p>
+
+
+      <h2><strong><%= @syntax_elements_ruby.element %></strong></h2>
+
+
+      <% @syntax_keyword_rubies.each do |keyword| %>
+      <h3><%= keyword %></h3>
+
+      <% end %>
+
+
+  </div>
+
+</div>

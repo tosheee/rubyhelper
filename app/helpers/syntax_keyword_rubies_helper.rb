@@ -1,0 +1,2 @@
+module SyntaxKeywordRubiesHelper
+end

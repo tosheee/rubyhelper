@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "ruby_sintax";
 
 body{
   #top-box{
@@ -37,13 +38,6 @@ body{
         font-size: 10px;
       }
     }
-    #main{
-      width: 70%;
-      height: 700px;
-    }
 
-    .footer{
-      clear: both;
-    }
   }
 }

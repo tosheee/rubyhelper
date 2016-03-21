@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160316200435) do
+ActiveRecord::Schema.define(version: 20160320144223) do
+
+  create_table "syntax_elements_rubies", force: :cascade do |t|
+    t.string   "element"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "syntax_keyword_rubies", force: :cascade do |t|
+    t.integer  "syntax_elements_rubies_id"
+    t.string   "syntax_keyword"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",      null: false
