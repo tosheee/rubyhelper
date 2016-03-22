@@ -73,12 +73,12 @@ class SyntaxElementsRubiesController < ApplicationController
       params.require(:syntax_elements_ruby).permit(:element)
     end
 
-    def check_if_admin
-
-      if current_user.role == 'superadmin'
-        true
-      else
-        render text: "Access denied "
-      end
+  def check_if_admin
+    if current_user.role == 'superadmin'
+      true
+    else
+      render 'static_pages/rubyhelper/'
+      #render text: "Access denied "
     end
+  end
 end

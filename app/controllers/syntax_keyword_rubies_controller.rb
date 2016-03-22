@@ -47,9 +47,12 @@ class SyntaxKeywordRubiesController < ApplicationController
     params.require(:syntax_keyword_ruby).permit(:syntax_elements_rubies_id, :syntax_keyword)
   end
 
-  def check_if_admin
-    render text: "Access denied "
-    #current_user.role == 'superadmin'
-  end
-
+    def check_if_admin
+      if current_user.role == 'superadmin'
+        true
+      else
+        render 'static_pages/rubyhelper/'
+        #render text: "Access denied "
+      end
+    end
 end

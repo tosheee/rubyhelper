@@ -73,8 +73,12 @@ class DescriptionKeywordsController < ApplicationController
       params.require(:description_keyword).permit(:syntax_keyword_rubies_id, :description, :code)
     end
 
-    def check_if_admin
-      render text: "Access denied "
-      #current_user.role == 'superadmin'
+  def check_if_admin
+    if current_user.role == 'superadmin'
+      true
+    else
+      render 'static_pages/rubyhelper/'
+      #render text: "Access denied "
     end
+  end
 end
