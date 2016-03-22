@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  syntax_keyword_rubies_id: 1
+  description: MyText
+  code: MyText
+
+two:
+  syntax_keyword_rubies_id: 1
+  description: MyText
+  code: MyText

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Syntax keyword rubies:</strong>
+  <%= @description_keyword.syntax_keyword_rubies_id %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @description_keyword.description %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @description_keyword.code %>
+</p>
+
+<%= link_to 'Edit', edit_description_keyword_path(@description_keyword) %> |
+<%= link_to 'Back', description_keywords_path %>

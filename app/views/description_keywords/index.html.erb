@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Description Keywords</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Syntax keyword rubies</th>
+      <th>Description</th>
+      <th>Code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @description_keywords.each do |description_keyword| %>
+      <tr>
+        <td><%= description_keyword.syntax_keyword_rubies_id %></td>
+        <td><%= description_keyword.description %></td>
+        <td><%= description_keyword.code %></td>
+        <td><%= link_to 'Show', description_keyword %></td>
+        <td><%= link_to 'Edit', edit_description_keyword_path(description_keyword) %></td>
+        <td><%= link_to 'Destroy', description_keyword, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Description keyword', new_description_keyword_path %>

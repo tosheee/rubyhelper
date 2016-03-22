@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :description_keywords
   root 'static_pages#rubyhelper'
 
   resources :syntax_elements_rubies

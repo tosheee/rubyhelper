@@ -1,5 +1,6 @@
 class SyntaxKeywordRubiesController < ApplicationController
 
+    before_filter :check_if_admin, only:[:index, :show, :new, :create, :edit, :update, :delete]
   def index
     @syntax_keyword_rubies = SyntaxKeywordRuby.all
   end
@@ -27,7 +28,7 @@ class SyntaxKeywordRubiesController < ApplicationController
 
   def update
     @syntax_keyword_ruby = SyntaxKeywordRuby.find(params[:id])
-    if @syntax_keyword_ruby.update_attributes(params[:syntax_keyword_ruby])
+    if @syntax_keyword_ruby.update(syntax_keyword_ruby_params)
       redirect_to action: :index
     else
       render action: :edit
@@ -44,6 +45,11 @@ class SyntaxKeywordRubiesController < ApplicationController
 
   def syntax_keyword_ruby_params
     params.require(:syntax_keyword_ruby).permit(:syntax_elements_rubies_id, :syntax_keyword)
+  end
+
+  def check_if_admin
+    render text: "Access denied "
+    #current_user.role == 'superadmin'
   end
 
 end

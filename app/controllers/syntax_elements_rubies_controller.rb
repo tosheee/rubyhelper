@@ -1,5 +1,6 @@
 class SyntaxElementsRubiesController < ApplicationController
   before_action :set_syntax_elements_ruby, only: [:show, :edit, :update, :destroy]
+  before_filter :check_if_admin, only:[:index, :show, :new, :create, :edit, :update, :delete]
 
   # GET /syntax_elements_rubies
   # GET /syntax_elements_rubies.json
@@ -70,5 +71,14 @@ class SyntaxElementsRubiesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def syntax_elements_ruby_params
       params.require(:syntax_elements_ruby).permit(:element)
+    end
+
+    def check_if_admin
+
+      if current_user.role == 'superadmin'
+        true
+      else
+        render text: "Access denied "
+      end
     end
 end
