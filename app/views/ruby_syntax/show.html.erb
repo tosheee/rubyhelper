@@ -12,9 +12,7 @@
     <% @syntax_keyword_rubies.each do |keyword| %>
         <details>
             <summary><%= keyword.last %></summary>
-
-
-          <% DescriptionKeyword.all.each do |description_key| %>
+          <% @description_keyword.each do |description_key| %>
 
               <% if keyword.first == description_key.syntax_keyword_rubies_id %>
                   <h4>Описание:</h4>
@@ -28,8 +26,6 @@
                   <% end %>
               <% end %>
           <% end %>
-
-
         </details>
     <% end %>
 
