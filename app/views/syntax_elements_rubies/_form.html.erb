@@ -1,3 +1,4 @@
+<div class="form-user">
 <%= form_for(@syntax_elements_ruby) do |f| %>
   <% if @syntax_elements_ruby.errors.any? %>
     <div id="error_explanation">
@@ -11,11 +12,11 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :element %><br>
-    <%= f.text_field :element %>
+  <div class="input-group">
+    <%= f.text_field :element, class: "form-control", placeholder: "" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', class:'btn btn-default navbar-btn' %>
   </div>
 <% end %>
+</div>

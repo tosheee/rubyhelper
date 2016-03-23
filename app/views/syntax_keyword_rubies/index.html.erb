@@ -1,18 +1,20 @@
-<h2>Ruby keywords</h2>
-<%= link_to 'New Ruby Keyword',new_syntax_keyword_ruby_path %>
-<table>
-  <tr>
-      <th>Keyword</th>
-      <th>Show</th>
-      <th>Edit</th>
-      <th>Destroy</th>
-  </tr>
-  <% @syntax_keyword_rubies.each do |keyword| %>
-  <tr>
-      <td><%= keyword.syntax_keyword %></td>
-      <td><%= link_to 'Show', keyword %></td>
-      <td><%= link_to 'Edit', edit_syntax_keyword_ruby_path(keyword) %></td>
-      <td><%= link_to 'Destroy', keyword, method: :delete, data:{ confirm: 'Are you sure to delete keyword' } %></td>
-  </tr>
-  <% end%>
-</table>
+<div class="form-user">
+    <h2>Ruby keywords</h2>
+    <%= link_to 'New Ruby Keyword',new_syntax_keyword_ruby_path %>
+    <table>
+      <tr>
+          <th>Keyword</th>
+          <th>Show</th>
+          <th>Edit</th>
+          <th>Destroy</th>
+      </tr>
+      <% @syntax_keyword_rubies.each do |keyword| %>
+      <tr>
+          <td><%= keyword.syntax_keyword %></td>
+          <td><%= link_to 'Show', keyword %></td>
+          <td><%= link_to 'Edit', edit_syntax_keyword_ruby_path(keyword) %></td>
+          <td><%= link_to 'Destroy', keyword, method: :delete, data:{ confirm: 'Are you sure to delete keyword' } %></td>
+      </tr>
+      <% end%>
+    </table>
+</div>

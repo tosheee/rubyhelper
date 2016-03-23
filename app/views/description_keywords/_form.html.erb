@@ -11,18 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-      <%= f.collection_select(:syntax_keyword_rubies_id, SyntaxKeywordRuby.all, :id, :syntax_keyword, :prompt => 'Select Keyword')%>
+  <div class="">
+    <%= f.collection_select(:syntax_keyword_rubies_id, SyntaxKeywordRuby.all, :id, :syntax_keyword, :prompt => 'Select elements')%>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <br>
+  <div class="">
+    <%= f.text_area :description, class: "form-control", placeholder: "Email" %>
   </div>
-  <div class="field">
-    <%= f.label :code %><br>
-    <%= f.text_area :code %>
+      <br>
+  <div class="">
+    <%= f.text_area :code, class: "form-control", placeholder: "Email" %>
   </div>
+      <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn'  %>
   </div>
 <% end %>

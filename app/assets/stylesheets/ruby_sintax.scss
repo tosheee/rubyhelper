@@ -1,15 +1,31 @@
 .main-content{
   .nav-vertical {
+    font-size: 20px;
     float: left;
     width: 150px;
+    ul{
+      list-style: none;
+      li{
+        position: relative;
+        padding-left: 0.4em;
+      }
+      li:before{
+        position: absolute;
+        left: -1em;
+        top:0.65em;
+      }
+    }
   }
 
 
   .central-main-content{
     width: 70%;
     margin-left: 206px;
-
+    summary{
+      font-size: 20px;
+      outline: none;
     }
 
-  }
+    }
+}
 

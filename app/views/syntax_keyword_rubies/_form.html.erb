@@ -1,5 +1,4 @@
-<div class="form-user">
-    <%= form_for @syntax_keyword_ruby do |f| %>
+ <%= form_for @syntax_keyword_ruby do |f| %>
         <div>
           <%= f.collection_select(:syntax_elements_rubies_id, SyntaxElementsRuby.all, :id, :element, :prompt => 'Select elements')%>
         </div>
@@ -12,4 +11,3 @@
           <%= f.submit 'Save', class: 'btn btn-default navbar-btn'%>
         </div>
     <% end %>
-</div>

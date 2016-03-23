@@ -1,4 +1,4 @@
-<div class="main-content">
+<div class="main-content" xmlns="http://www.w3.org/1999/html">
 
   <div class="nav-vertical">
     <%= render 'nav_vertical'%>
@@ -7,26 +7,30 @@
   <div class="central-main-content">
     <p id="notice"><%= notice %></p>
 
-
-      <h2><strong><%= @syntax_elements_ruby.element %></strong></h2>
+    <h2><strong><%= @syntax_elements_ruby.element %></strong></h2>
 
     <% @syntax_keyword_rubies.each do |keyword| %>
-      <div id="keyword-label">
-        <h3><%= keyword %></h3>
-        </div>
-        <% @description_keyword.each do |description_key| %>
+        <details>
+            <summary><%= keyword.last %></summary>
 
-            <h4>Описание:</h4>
-            <% if (!description_key.description.empty?) %>
-                <p><%= description_key.description %></p>
-            <% end %>
 
-            <h4>Пример:</h4>
-            <% if (!description_key.code.empty?) %>
-                 <pre><%= description_key.code %></pre>
-            <% end %>
-            <% break %>
-      <% end %>
+          <% DescriptionKeyword.all.each do |description_key| %>
+
+              <% if keyword.first == description_key.syntax_keyword_rubies_id %>
+                  <h4>Описание:</h4>
+                  <% if (!description_key.description.empty?) %>
+                      <p><%= description_key.description %></p>
+                  <% end %>
+
+                  <h4>Пример:</h4>
+                  <% if (!description_key.code.empty?) %>
+                      <pre><%= description_key.code %></pre>
+                  <% end %>
+              <% end %>
+          <% end %>
+
+
+        </details>
     <% end %>
 
   </div>

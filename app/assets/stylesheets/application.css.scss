@@ -16,8 +16,10 @@ body{
       background-color: #009D23;
 
     }
+  }
 
-    #brand {
+
+  #brand {
       a{
         left: 10px;
         font-size: 25px;
@@ -37,7 +39,20 @@ body{
       #text-error{
         font-size: 10px;
       }
+      select{
+        width: 500px;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 1;
+        border: 0;
+        border-radius: 0;
+        height: 34px;
+        -webkit-appearance: none;
+      }
+      textarea{
+        width: 500px;
+        height: 200px;
+      }
     }
 
   }
-}
