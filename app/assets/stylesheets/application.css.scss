@@ -3,10 +3,16 @@
 @import "ruby_sintax";
 @import "syntax_elements_rubies";
 body{
+background-color: #CCCCCC;
+
   #top-box{
     margin: 0 auto;
     height: 20px;
     background-color: #FF4A02;
+  }
+  .transparent{
+    height: 10%;
+    background-color: #009D23;
   }
 
   .wrapper {
@@ -15,6 +21,11 @@ body{
       display:block;
       background-color: #009D23;
 
+    }
+
+    .logo-container{
+      margin: 0 auto;
+      width: 700px;
     }
   }
 
@@ -30,6 +41,7 @@ body{
     }
 
     .form-user{
+
       margin: 0 auto;
       padding: 20px;
       width: 400px;
