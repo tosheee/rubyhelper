@@ -1,0 +1,30 @@
+<div class="form-index">
+
+  <div class="heading">
+    <h2>Index Ruby Syntaxes</h2>
+  </div>
+
+  <%= link_to 'New Ruby Keyword', new_index_ruby_syntax_path %>
+  <table>
+    <tr>
+      <th>Index title ruby</th>
+      <th>Title description</th>
+      <th>Description</th>
+      <th>Urls</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+    <% @index_ruby_syntaxes.each do |index_sintaxes| %>
+        <tr>
+          <td><%= index_sintaxes.index_title_ruby %></td>
+          <td><%= index_sintaxes.index_title_description_ruby %></td>
+          <td><%= index_sintaxes.index_description %></td>
+          <td><%= index_sintaxes.ruby_urls %></td>
+          <td><%= link_to 'Show', index_sintaxes %></td>
+          <td><%= link_to 'Edit', edit_index_ruby_syntax_path(index_sintaxes) %></td>
+          <td><%= link_to 'Destroy', index_sintaxes, method: :delete, data:{ confirm: 'Are you sure to delete keyword' } %></td>
+        </tr>
+    <% end%>
+  </table>
+</div>

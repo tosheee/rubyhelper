@@ -1,0 +1,22 @@
+<%= form_for @index_ruby_syntax do |f| %>
+
+    <div>
+      <%= f.text_field :index_title_ruby, class: "form-control", placeholder: "Title" %>
+    </div>
+        <br>
+    <div>
+      <%= f.text_field :index_title_description_ruby, class: "form-control", placeholder: "Title Description" %>
+    </div>
+    <br>
+    <div>
+      <%= f.text_area :index_description, class: "form-control", placeholder: "Description" %>
+    </div>
+    <br>
+    <div>
+      <%= f.text_area :ruby_urls, class: "form-control", placeholder: "Url" %>
+    </div>
+    <br>
+    <div>
+      <%= f.submit 'Save', class: 'btn btn-default navbar-btn'%>
+    </div>
+<% end %>

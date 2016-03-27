@@ -1,0 +1,2 @@
+module IndexRubySyntaxesHelper
+end

@@ -2,6 +2,7 @@ class RubySyntaxController < ApplicationController
 
   def index
     @syntax_elements_rubies = SyntaxElementsRuby.all
+    @index_ruby_syntaxes = IndexRubySyntax.all
   end
 
   def show

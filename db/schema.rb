@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327150416) do
+ActiveRecord::Schema.define(version: 20160327162406) do
 
   create_table "description_keywords", force: :cascade do |t|
     t.integer  "syntax_keyword_rubies_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20160327150416) do
     t.datetime "updated_at",               null: false
     t.string   "description_title"
     t.string   "code_title"
+  end
+
+  create_table "index_ruby_syntaxes", force: :cascade do |t|
+    t.string   "index_title_ruby"
+    t.string   "index_title_description_ruby"
+    t.text     "index_description"
+    t.text     "ruby_urls"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "syntax_elements_rubies", force: :cascade do |t|
