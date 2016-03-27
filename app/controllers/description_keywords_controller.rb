@@ -70,7 +70,7 @@ class DescriptionKeywordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def description_keyword_params
-      params.require(:description_keyword).permit(:syntax_keyword_rubies_id, :description, :code)
+      params.require(:description_keyword).permit(:syntax_keyword_rubies_id, :description, :code, :description_title, :code_title)
     end
 
   def check_if_admin

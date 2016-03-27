@@ -15,15 +15,27 @@
     <%= f.collection_select(:syntax_keyword_rubies_id, SyntaxKeywordRuby.all, :id, :syntax_keyword, :prompt => 'Select elements')%>
   </div>
     <br>
-  <div class="">
-    <%= f.text_area :description, class: "form-control", placeholder: "Email" %>
+
+    <div class="">
+      <%= f.text_field :description_title, class: "form-control", placeholder: "Title description" %>
+    </div>
+    <br>
+
+    <div class="">
+    <%= f.text_area :description, class: "form-control", placeholder: "Description" %>
   </div>
+    <br>
+
+    <div class="">
+      <%= f.text_field :code_title, class: "form-control", placeholder: "Code description" %>
+    </div>
+    <br>
+
+    <div class="">
+      <%= f.text_area :code, class: "form-control", placeholder: "Code" %>
+    </div>
       <br>
-  <div class="">
-    <%= f.text_area :code, class: "form-control", placeholder: "Email" %>
-  </div>
-      <br>
-  <div class="actions">
-    <%= f.submit 'Save', class: 'btn btn-default navbar-btn'  %>
-  </div>
+      <div class="actions">
+        <%= f.submit 'Save', class: 'btn btn-default navbar-btn'  %>
+      </div>
 <% end %>

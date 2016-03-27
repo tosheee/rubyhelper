@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321183137) do
+ActiveRecord::Schema.define(version: 20160327150416) do
 
   create_table "description_keywords", force: :cascade do |t|
     t.integer  "syntax_keyword_rubies_id"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20160321183137) do
     t.text     "code"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "description_title"
+    t.string   "code_title"
   end
 
   create_table "syntax_elements_rubies", force: :cascade do |t|
