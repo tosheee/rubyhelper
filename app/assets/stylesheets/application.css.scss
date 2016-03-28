@@ -16,10 +16,12 @@ body{
 
   .wrapper {
     margin: 0 auto;
-    .navbar.navbar-default {
-      display: block;
-      background-color: #009D23;
+    .navbar{
+      border-radius: 0px;
+    .navbar-default {
 
+      display: block;
+    }
     }
 
     #brand {

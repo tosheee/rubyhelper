@@ -15,18 +15,14 @@
         padding-left: 0.4em;
         a{
           text-decoration: none;
-          color: #00cccc;
+          color: #666666;
           padding: 10.5px 11px;
           background: -webkit-linear-gradient(top, rgba(231,249,243,1) 0%, rgba(202,236,228,1) 50%, rgba(209,255,244,1) 100%);
           display: block;
         }
-        a:visited{
-          color: #666666;
+        a:hover{
+          color: #00cccc;
         }
-      }
-      a:hover, li .current{
-        color: #2bb648;
-
       }
     }
   }
@@ -42,9 +38,9 @@
       font-size: 20px;
       outline: none;
     }
-    summary:visited{
-      color: white;
-      background-color: #5FD367;
+    summary:hover{
+      color: #00cccc;
+      background: -webkit-linear-gradient(top, rgba(231,249,243,1) 0%, rgba(202,236,228,1) 100%, rgba(209,255,244,1) 100%);
     }
 
     }
