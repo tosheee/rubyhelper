@@ -1,17 +1,13 @@
 <div class="main-content" xmlns="http://www.w3.org/1999/html">
   <div>
-    <%= image_tag("ruby_logo.gif", :alt => "alabala") %>
+    <div><%= image_tag("ruby_logo.gif", :alt => "alabala") %></div>
+    <p id="heading-syntax"><strong><%= @syntax_elements_ruby.element %></strong></p>
   </div>
 
   <div class="nav-vertical">
     <%= render 'nav_vertical'%>
   </div>
-
   <div class="central-main-content">
-    <p id="notice"><%= notice %></p>
-
-    <h2><strong><%= @syntax_elements_ruby.element %></strong></h2>
-
     <% @syntax_keyword_rubies.each do |keyword| %>
         <details>
             <summary><%= keyword.last %></summary>
