@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resources :index_ruby_syntaxes
 
+  resources :type_inner_methods
+
   devise_for :users, controllers: { registrations: 'registrations' }
 
 end

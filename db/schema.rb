@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160327162406) do
+ActiveRecord::Schema.define(version: 20160328204936) do
 
   create_table "description_keywords", force: :cascade do |t|
     t.integer  "syntax_keyword_rubies_id"
@@ -43,6 +43,12 @@ ActiveRecord::Schema.define(version: 20160327162406) do
     t.string   "syntax_keyword"
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+  end
+
+  create_table "type_inner_methods", force: :cascade do |t|
+    t.string   "name_type_method"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|
