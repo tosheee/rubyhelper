@@ -10,13 +10,17 @@
   <div class="central-main-content">
     <% @syntax_keyword_rubies.each do |keyword| %>
         <details>
-            <summary><%= keyword.last %></summary>
+
+            <summary><%= keyword[1] %><p id="keyword-description"><b>Описание:</b><%= keyword.last%></p></summary>
+
+
           <% @description_keyword.each do |description_key| %>
 
               <% if keyword.first == description_key.syntax_keyword_rubies_id %>
 
                   <% if (!description_key.description_title.empty?) %>
                     <h4><%= description_key.description_title %></h4>
+
                   <% end %>
 
                   <% if (!description_key.description.empty?) %>

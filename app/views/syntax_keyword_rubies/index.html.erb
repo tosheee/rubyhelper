@@ -9,6 +9,7 @@
       <tr>
           <th>Element</th>
           <th>Keyword</th>
+          <th>Description</th>
           <th>Show</th>
           <th>Edit</th>
           <th>Destroy</th>
@@ -17,6 +18,7 @@
       <tr>
           <td><%= keyword.syntax_elements_rubies_id = SyntaxElementsRuby.find(keyword.syntax_elements_rubies_id).element %></td>
           <td><%= keyword.syntax_keyword %></td>
+          <td><%= keyword.description_keyword %></td>
           <td><%= link_to 'Show', keyword %></td>
           <td><%= link_to 'Edit', edit_syntax_keyword_ruby_path(keyword) %></td>
           <td><%= link_to 'Destroy', keyword, method: :delete, data:{ confirm: 'Are you sure to delete keyword' } %></td>

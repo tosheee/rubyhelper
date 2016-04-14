@@ -1,0 +1,26 @@
+<div class="form-index">
+
+  <div class="heading">
+    <h2>Name methods</h2>
+  </div>
+
+  <%= link_to 'New Ruby Keyword', new_class_name_method_path %>
+  <table>
+    <tr>
+      <th>Class</th>
+      <th>Name method</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+    <% @class_name_methods.each do |name_method| %>
+        <tr>
+          <td><%= name_method.type_inner_methods_id = TypeInnerMethod.find(name_method.type_inner_methods_id).name_type_method %></td>
+          <td><%= name_method.name_method %></td>
+          <td><%= link_to 'Show', name_method %></td>
+          <td><%= link_to 'Edit', edit_class_name_method_path(name_method) %></td>
+          <td><%= link_to 'Destroy', name_method, method: :delete, data:{ confirm: 'Are you sure to delete keyword' } %></td>
+        </tr>
+    <% end%>
+  </table>
+</div>

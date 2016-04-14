@@ -1,0 +1,20 @@
+<div class="main-content" xmlns="http://www.w3.org/1999/html">
+  <div>
+    <div><%= image_tag("ruby_logo.gif", :alt => "alabala") %></div>
+    <p id="heading-syntax"><strong><%= @type_inner_method.name_type_method %></strong></p>
+  </div>
+
+  <div class="nav-vertical">
+    <%= render 'nav_vertical'%>
+  </div>
+  <div class="central-main-content">
+    <% @class_name_method.each do |keyword| %>
+        <details>
+          <summary><%= keyword.last %></summary>
+
+        </details>
+    <% end %>
+
+  </div>
+
+</div>

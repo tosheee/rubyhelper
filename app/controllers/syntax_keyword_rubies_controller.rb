@@ -43,7 +43,7 @@ class SyntaxKeywordRubiesController < ApplicationController
 
   private
   def syntax_keyword_ruby_params
-    params.require(:syntax_keyword_ruby).permit(:syntax_elements_rubies_id, :syntax_keyword)
+    params.require(:syntax_keyword_ruby).permit(:syntax_elements_rubies_id, :syntax_keyword, :description_keyword)
   end
 
   def check_if_admin

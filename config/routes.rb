@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   resources :type_inner_methods
 
+  resources :ruby_guide_methods
+
+  resources :class_name_methods
+
   devise_for :users, controllers: { registrations: 'registrations' }
 
 end

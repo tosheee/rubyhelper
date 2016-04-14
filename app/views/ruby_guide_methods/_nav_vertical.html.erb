@@ -1,0 +1,5 @@
+<ul>
+  <% @type_inner_methods.each do |type_inner_method| %>
+      <li><%= link_to type_inner_method.name_type_method,  "/ruby_guide_methods/#{type_inner_method.id}" %></li>
+  <% end %>
+</ul>
