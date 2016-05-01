@@ -1,8 +1,14 @@
+<div class="form-index">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Admin Ruby Syntax Keyword Descriptions</h1>
+  <div class="heading">
+    <h4>Listing Admin Ruby Syntax Keyword Descriptions</h4>
+  </div>
 
-<table>
+  <%= link_to 'New Ruby syntax keyword description', new_admin_ruby_syntax_keyword_description_path %>
+
+
+  <table>
   <thead>
     <tr>
       <th>Ruby syntax name keyword</th>
@@ -13,7 +19,9 @@
       <th>Keyword code</th>
       <th>Label result</th>
       <th>Result code</th>
-      <th colspan="3"></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
 
@@ -37,5 +45,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Ruby syntax keyword description', new_admin_ruby_syntax_keyword_description_path %>
+</div>
