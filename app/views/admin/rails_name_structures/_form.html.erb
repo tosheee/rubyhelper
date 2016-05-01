@@ -1,0 +1,26 @@
+<%= form_for(@admin_rails_name_structure) do |f| %>
+  <% if @admin_rails_name_structure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_rails_name_structure.errors.count, "error") %> prohibited this admin_rails_name_structure from being saved:</h2>
+
+      <ul>
+      <% @admin_rails_name_structure.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group">
+    <%= f.number_field :num_structure, class: "form-control", placeholder: "" %>
+  </div>
+    <br>
+  <div class="input-group">
+    <%= f.text_field :name_structure, class: "form-control", placeholder: "Name structure" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', class:'btn btn-default navbar-btn' %>
+  </div>
+
+<% end %>

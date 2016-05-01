@@ -1,0 +1,16 @@
+<div class="form-user">
+<p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Num structure:</strong>
+      <%= @admin_rails_name_structure.num_structure %>
+    </p>
+
+    <p>
+      <strong>Name structure:</strong>
+      <%= @admin_rails_name_structure.name_structure %>
+    </p>
+
+    <%= link_to 'Edit', edit_admin_rails_name_structure_path(@admin_rails_name_structure) %> |
+    <%= link_to 'Back', admin_rails_name_structures_path %>
+</div>

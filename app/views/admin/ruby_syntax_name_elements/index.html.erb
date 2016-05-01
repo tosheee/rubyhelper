@@ -1,0 +1,33 @@
+<div class="form-index">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Ruby Syntax Name Elements</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num view</th>
+      <th>Name element</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_ruby_syntax_name_elements.each do |admin_ruby_syntax_name_element| %>
+      <tr>
+        <td><%= admin_ruby_syntax_name_element.num_view %></td>
+        <td><%= admin_ruby_syntax_name_element.name_element %></td>
+        <td><%= link_to 'Show', admin_ruby_syntax_name_element %></td>
+        <td><%= link_to 'Edit', edit_admin_ruby_syntax_name_element_path(admin_ruby_syntax_name_element) %></td>
+        <td><%= link_to 'Destroy', admin_ruby_syntax_name_element, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ruby syntax name element', new_admin_ruby_syntax_name_element_path %>
+</div>

@@ -1,0 +1,35 @@
+<div class="form-index">
+    <p id="notice"><%= notice %></p>
+
+        <div class="heading">
+            <h2>Listing Admin Rails Name Structures</h2>
+        </div>
+    <%= link_to 'New Rails name structure', new_admin_rails_name_structure_path %>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Num structure</th>
+          <th>Name structure</th>
+          <th>Show</th>
+          <th>Edit</th>
+          <th>Destroy</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @admin_rails_name_structures.each do |admin_rails_name_structure| %>
+          <tr>
+            <td><%= admin_rails_name_structure.num_structure %></td>
+            <td><%= admin_rails_name_structure.name_structure %></td>
+            <td><%= link_to 'Show', admin_rails_name_structure %></td>
+            <td><%= link_to 'Edit', edit_admin_rails_name_structure_path(admin_rails_name_structure) %></td>
+            <td><%= link_to 'Destroy', admin_rails_name_structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+</div>
+

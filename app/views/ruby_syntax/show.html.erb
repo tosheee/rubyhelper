@@ -1,38 +1,48 @@
 <div class="main-content" xmlns="http://www.w3.org/1999/html">
   <div>
     <div><%= image_tag("ruby_logo.gif", :alt => "alabala") %></div>
-    <p id="heading-syntax"><strong><%= @syntax_elements_ruby.element %></strong></p>
+    <p id="heading-syntax"><strong><%= @syntax_name_element.name_element %></strong></p>
   </div>
 
   <div class="nav-vertical">
     <%= render 'nav_vertical'%>
   </div>
   <div class="central-main-content">
-    <% @syntax_keyword_rubies.each do |keyword| %>
+    <% @syntax_name_keywords.each do |keyword| %>
         <details>
 
             <summary><%= keyword[1] %><p id="keyword-description"><b>Описание:</b><%= keyword.last%></p></summary>
 
 
-          <% @description_keyword.each do |description_key| %>
+          <% @syntax_keyword_descriptions.each do |description_key| %>
 
-              <% if keyword.first == description_key.syntax_keyword_rubies_id %>
+              <% if keyword.first == description_key.ruby_syntax_name_keyword_id %>
 
-                  <% if (!description_key.description_title.empty?) %>
-                    <h4><%= description_key.description_title %></h4>
+                  <% if (!description_key.label_description.empty?) %>
+                    <h4><%= description_key.label_description %></h4>
 
                   <% end %>
 
-                  <% if (!description_key.description.empty?) %>
-                      <p><%= description_key.description %></p>
+                  <% if (!description_key.full_keyword_description.empty?) %>
+                      <p><%= description_key.full_keyword_description %></p>
                   <% end %>
 
-                  <% if (!description_key.description.empty?) %>
-                    <h4><%= description_key.code_title%></h4>
+
+                  <% if (!description_key.label_code.empty?) %>
+                      <h4><%= description_key.label_code %></h4>
                   <% end %>
 
-                  <% if (!description_key.code.empty?) %>
-                      <pre><%= description_key.code %></pre>
+                  <% if (!description_key.keyword_code.empty?) %>
+                      <pre><%= description_key.keyword_code %></pre>
+                  <% end %>
+
+
+                  <% if (!description_key.label_result.empty?) %>
+                      <h4><%= description_key.label_result %></h4>
+                  <% end %>
+
+                  <% if (!description_key.result_code.empty?) %>
+                      <pre><%= description_key.result_code %></pre>
                   <% end %>
 
               <% end %>

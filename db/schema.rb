@@ -11,7 +11,62 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414210414) do
+ActiveRecord::Schema.define(version: 20160430083002) do
+
+  create_table "admin_rails_name_metods", force: :cascade do |t|
+    t.string   "structure_element"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "admin_rails_name_structures", force: :cascade do |t|
+    t.integer  "num_structure"
+    t.string   "name_structure"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "admin_rails_structure_elements", force: :cascade do |t|
+    t.string   "structure_element"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  create_table "admin_rails_structures", force: :cascade do |t|
+    t.string   "element"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "num"
+  end
+
+  create_table "admin_ruby_syntax_keyword_descriptions", force: :cascade do |t|
+    t.integer  "ruby_syntax_name_keyword_id"
+    t.integer  "num_view"
+    t.string   "label_description"
+    t.text     "full_keyword_description"
+    t.string   "label_code"
+    t.text     "keyword_code"
+    t.string   "label_result"
+    t.text     "result_code"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+  end
+
+  create_table "admin_ruby_syntax_name_elements", force: :cascade do |t|
+    t.integer  "num_view"
+    t.string   "name_element"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "admin_ruby_syntax_name_keywords", force: :cascade do |t|
+    t.integer  "admin_ruby_suntax_name_element_id"
+    t.integer  "num_view"
+    t.string   "name_keyword"
+    t.text     "name_keyword_description"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+  end
 
   create_table "class_name_methods", force: :cascade do |t|
     t.integer  "type_inner_methods_id"

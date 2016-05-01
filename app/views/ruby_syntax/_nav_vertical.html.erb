@@ -1,5 +1,5 @@
 <ul>
-    <% @syntax_elements_rubies.each do |syntax_element| %>
-      <li><%= link_to syntax_element.element, "/ruby_syntax/#{syntax_element.id}" %></li>
+    <% @syntax_name_elements.each do |syntax_element| %>
+      <li><%= link_to syntax_element.name_element, "/ruby_syntax/#{syntax_element.id}" %></li>
     <% end %>
 </ul>

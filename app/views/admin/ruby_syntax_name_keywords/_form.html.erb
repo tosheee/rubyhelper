@@ -1,0 +1,34 @@
+<%= form_for(@admin_ruby_syntax_name_keyword) do |f| %>
+  <% if @admin_ruby_syntax_name_keyword.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_ruby_syntax_name_keyword.errors.count, "error") %> prohibited this admin_ruby_syntax_name_keyword from being saved:</h2>
+
+      <ul>
+      <% @admin_ruby_syntax_name_keyword.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="">
+      <%= f.collection_select(:admin_ruby_suntax_name_element_id, Admin::RubySyntaxNameElement.all, :id, :name_element, :prompt => 'Select elements')%>
+    </div>
+    <br>
+
+  <div class="">
+    <%= f.number_field :num_view, class: "form-control", placeholder: "Enter num view"  %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_field :name_keyword, class: "form-control", placeholder: "Enter keyword"  %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_area :name_keyword_description, class: "form-control", placeholder: "Enter short description"  %>
+  </div>
+    <br>
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+  </div>
+<% end %>

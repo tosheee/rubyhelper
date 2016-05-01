@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :ruby_syntax_keyword_descriptions
+  end
+  namespace :admin do
+    resources :ruby_syntax_name_keywords
+  end
+  namespace :admin do
+    resources :ruby_syntax_name_elements
+  end
+  namespace :admin do
+    resources :rails_name_structures
+  end
   root 'static_pages#rubyhelper'
 
   resources :description_keywords

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  num_structure: 1
+  name_structure: MyString
+
+two:
+  num_structure: 1
+  name_structure: MyString

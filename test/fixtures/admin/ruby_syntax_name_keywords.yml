@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  admin_ruby_suntax_name_element_id: 1
+  num_view: 1
+  name_keyword: MyString
+  name_keyword_description: MyText
+
+two:
+  admin_ruby_suntax_name_element_id: 1
+  num_view: 1
+  name_keyword: MyString
+  name_keyword_description: MyText
