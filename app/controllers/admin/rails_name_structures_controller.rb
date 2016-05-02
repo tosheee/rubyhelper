@@ -1,5 +1,6 @@
 class Admin::RailsNameStructuresController < ApplicationController
   before_action :set_admin_rails_name_structure, only: [:show, :edit, :update, :destroy]
+  before_filter :check_if_admin, only:[:index, :show, :new, :create, :edit, :update, :delete]
 
   def index
     @admin_rails_name_structures = Admin::RailsNameStructure.all
@@ -44,5 +45,13 @@ class Admin::RailsNameStructuresController < ApplicationController
 
     def admin_rails_name_structure_params
       params.require(:admin_rails_name_structure).permit(:num_structure, :name_structure)
+    end
+    def check_if_admin
+      if current_user.role == 'superadmin'
+        true
+      else
+        render 'static_pages/rubyhelper/'
+        #render text: "Access denied "
+      end
     end
 end
