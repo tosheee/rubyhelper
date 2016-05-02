@@ -1,0 +1,16 @@
+<div class="form-user">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Num view:</strong>
+      <%= @admin_ruby_name_class.num_view %>
+    </p>
+
+    <p>
+      <strong>Name class:</strong>
+      <%= @admin_ruby_name_class.name_class %>
+    </p>
+
+    <%= link_to 'Edit', edit_admin_ruby_name_class_path(@admin_ruby_name_class) %> |
+    <%= link_to 'Back', admin_ruby_name_classes_path %>
+</div>

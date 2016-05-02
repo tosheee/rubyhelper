@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ruby_name_class_id: 1
+  name_method: MyString
+  short_method_description: MyText
+
+two:
+  ruby_name_class_id: 1
+  name_method: MyString
+  short_method_description: MyText

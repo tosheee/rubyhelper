@@ -1,0 +1,50 @@
+<%= form_for(@admin_ruby_name_method_full_description) do |f| %>
+  <% if @admin_ruby_name_method_full_description.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_ruby_name_method_full_description.errors.count, "error") %> prohibited this admin_ruby_name_method_full_description from being saved:</h2>
+
+      <ul>
+      <% @admin_ruby_name_method_full_description.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="">
+      <%= f.collection_select(:ruby_name_method_id, Admin::RubyNameMethod.all, :id, :name_method, :prompt => 'Select Method')%>
+    </div>
+    <br>
+
+  <div class="">
+    <%= f.number_field :num_view, class: "form-control", placeholder: "Num View" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_field :label_description, class: "form-control", placeholder: "Label Description" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_area :full_method_description, class: "form-control", placeholder: "Method Description" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_field :label_code, class: "form-control", placeholder: "Label Code" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_area :method_code, class: "form-control", placeholder: "Example Code" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_field :label_result, class: "form-control", placeholder: "Lable Result" %>
+  </div>
+    <br>
+  <div class="">
+    <%= f.text_area :result_code, class: "form-control", placeholder: "Result Code" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn'%>
+  </div>
+<% end %>

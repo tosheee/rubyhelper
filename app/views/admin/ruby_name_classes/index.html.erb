@@ -1,0 +1,31 @@
+<div class="form-index">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Ruby Name Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Num view</th>
+      <th>Name class</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_ruby_name_classes.each do |admin_ruby_name_class| %>
+      <tr>
+        <td><%= admin_ruby_name_class.num_view %></td>
+        <td><%= admin_ruby_name_class.name_class %></td>
+        <td><%= link_to 'Show', admin_ruby_name_class %></td>
+        <td><%= link_to 'Edit', edit_admin_ruby_name_class_path(admin_ruby_name_class) %></td>
+        <td><%= link_to 'Destroy', admin_ruby_name_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ruby name class', new_admin_ruby_name_class_path %>
+</div>

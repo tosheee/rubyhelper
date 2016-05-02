@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
 
   namespace :admin do
+    resources :ruby_name_method_full_descriptions
+  end
+  namespace :admin do
+    resources :ruby_name_methods
+  end
+  namespace :admin do
+    resources :ruby_name_methods
+  end
+  namespace :admin do
+    resources :ruby_name_classes
+  end
+  namespace :admin do
     resources :ruby_syntax_keyword_descriptions
   end
   namespace :admin do

@@ -1,0 +1,21 @@
+<div class="form-user">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ruby name class:</strong>
+  <%= @admin_ruby_name_method.ruby_name_class_id %>
+</p>
+
+<p>
+  <strong>Name method:</strong>
+  <%= @admin_ruby_name_method.name_method %>
+</p>
+
+<p>
+  <strong>Short method description:</strong>
+  <%= @admin_ruby_name_method.short_method_description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_ruby_name_method_path(@admin_ruby_name_method) %> |
+<%= link_to 'Back', admin_ruby_name_methods_path %>
+</div>

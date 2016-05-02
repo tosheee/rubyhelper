@@ -1,0 +1,34 @@
+<div class="form-index">
+<p id="notice"><%= notice %></p>
+    <div class="heading">
+        <h3>Listing Admin Ruby Name Methods</h3>
+    </div>
+
+  <%= link_to 'New Ruby name method', new_admin_ruby_name_method_path %>
+  <table>
+  <thead>
+    <tr>
+      <th>Ruby name class</th>
+      <th>Name method</th>
+      <th>Short method description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_ruby_name_methods.each do |admin_ruby_name_method| %>
+      <tr>
+        <td><%= admin_ruby_name_method.ruby_name_class_id %></td>
+        <td><%= admin_ruby_name_method.name_method %></td>
+        <td><%= admin_ruby_name_method.short_method_description %></td>
+        <td><%= link_to 'Show', admin_ruby_name_method %></td>
+        <td><%= link_to 'Edit', edit_admin_ruby_name_method_path(admin_ruby_name_method) %></td>
+        <td><%= link_to 'Destroy', admin_ruby_name_method, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+

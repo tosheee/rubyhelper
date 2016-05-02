@@ -1,0 +1,24 @@
+<%= form_for(@admin_ruby_name_class) do |f| %>
+  <% if @admin_ruby_name_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@admin_ruby_name_class.errors.count, "error") %> prohibited this admin_ruby_name_class from being saved:</h2>
+
+      <ul>
+      <% @admin_ruby_name_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group">
+    <%= f.number_field :num_view, class: "form-control", placeholeder: "Num View" %>
+  </div>
+  <br>
+    <div class="input-group">
+    <%= f.text_field :name_class, class: "form-control", placeholeder: "Name Class" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-default navbar-btn' %>
+  </div>
+<% end %>

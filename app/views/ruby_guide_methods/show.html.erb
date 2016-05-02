@@ -1,17 +1,51 @@
 <div class="main-content" xmlns="http://www.w3.org/1999/html">
   <div>
     <div><%= image_tag("ruby_logo.gif", :alt => "alabala") %></div>
-    <p id="heading-syntax"><strong><%= @type_inner_method.name_type_method %></strong></p>
+    <p id="heading-syntax"><strong><%= @ruby_name_class.name_class %></strong></p>
   </div>
 
   <div class="nav-vertical">
     <%= render 'nav_vertical'%>
   </div>
   <div class="central-main-content">
-    <% @class_name_method.each do |keyword| %>
+    <% @name_methods.each do |name| %>
         <details>
-          <summary><%= keyword.last %></summary>
+          <summary><%= name[1]%><p id="keyword-description"><b>Описание: </b><%= name.last%></p></summary>
 
+
+          <% @method_full_descriptions.each do |description_method| %>
+
+              <% if name.first == description_method.ruby_name_method_id %>
+
+                  <% if (!description_method.label_description.empty?) %>
+                      <h4><%= description_method.label_description %></h4>
+
+                  <% end %>
+
+                  <% if (!description_method.full_method_description.empty?) %>
+                      <p><%= description_method.full_method_description %></p>
+                  <% end %>
+
+
+                  <% if (!description_method.label_code.empty?) %>
+                      <h4><%= description_method.label_code %></h4>
+                  <% end %>
+
+                  <% if (!description_method.method_code.empty?) %>
+                      <pre><%= description_method.method_code %></pre>
+                  <% end %>
+
+
+                  <% if (!description_method.label_result.empty?) %>
+                      <h4><%= description_method.label_result %></h4>
+                  <% end %>
+
+                  <% if (!description_method.result_code.empty?) %>
+                      <pre><%= description_method.result_code %></pre>
+                  <% end %>
+
+              <% end %>
+          <% end %>
         </details>
     <% end %>
 

@@ -46,6 +46,7 @@ class Admin::RailsNameStructuresController < ApplicationController
     def admin_rails_name_structure_params
       params.require(:admin_rails_name_structure).permit(:num_structure, :name_structure)
     end
+
     def check_if_admin
       if current_user.role == 'superadmin'
         true
