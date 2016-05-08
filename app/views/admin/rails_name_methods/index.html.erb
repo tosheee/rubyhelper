@@ -1,0 +1,34 @@
+<div class="form-index">
+<p id="notice"><%= notice %></p>
+  <div class="heading">
+    <h4>Listing Admin Rails Name Methods</h4>
+    | <%= link_to ' Structure ', admin_rails_name_structures_path %>
+    | <%= link_to ' Rails Method description ', admin_rails_method_descriptions_path %>
+    |<%= link_to ' New Rails name method ', new_admin_rails_name_method_path %> |
+  </div>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Rails name structure</th>
+      <th>Name method</th>
+      <th>Short description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_rails_name_methods.each do |admin_rails_name_method| %>
+      <tr>
+        <td><%= Admin::RailsNameStructure.find(admin_rails_name_method.rails_name_structure_id).name_structure %></td>
+        <td><%= admin_rails_name_method.name_method %></td>
+        <td><%= admin_rails_name_method.short_description %></td>
+        <td><%= link_to 'Show', admin_rails_name_method %></td>
+        <td><%= link_to 'Edit', edit_admin_rails_name_method_path(admin_rails_name_method) %></td>
+        <td><%= link_to 'Destroy', admin_rails_name_method, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+  <br>
+</div>

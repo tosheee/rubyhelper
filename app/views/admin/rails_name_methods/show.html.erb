@@ -1,0 +1,21 @@
+<div class="form-user">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rails name structure:</strong>
+  <%= @admin_rails_name_method.rails_name_structure_id %>
+</p>
+
+<p>
+  <strong>Name method:</strong>
+  <%= @admin_rails_name_method.name_method %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @admin_rails_name_method.short_description %>
+</p>
+
+<%= link_to 'Edit', edit_admin_rails_name_method_path(@admin_rails_name_method) %> |
+<%= link_to 'Back', admin_rails_name_methods_path %>
+</div>

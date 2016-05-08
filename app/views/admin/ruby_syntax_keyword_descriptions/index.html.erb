@@ -3,10 +3,10 @@
 
   <div class="heading">
     <h4>Listing Admin Ruby Syntax Keyword Descriptions</h4>
+    | <%= link_to 'Elements', admin_ruby_syntax_name_elements_path %>
+    | <%= link_to 'Keywords', admin_ruby_syntax_name_keywords_path %>
+    | <%= link_to 'New Ruby syntax keyword description', new_admin_ruby_syntax_keyword_description_path %> |
   </div>
-  | <%= link_to 'Elements', admin_ruby_syntax_name_elements_path %>
-  | <%= link_to 'Keywords', admin_ruby_syntax_name_keywords_path %>
-  | <%= link_to 'New Ruby syntax keyword description', new_admin_ruby_syntax_keyword_description_path %> |
 
 
   <table>
@@ -29,7 +29,7 @@
   <tbody>
     <% @admin_ruby_syntax_keyword_descriptions.each do |admin_ruby_syntax_keyword_description| %>
       <tr>
-        <td><%= admin_ruby_syntax_keyword_description.ruby_syntax_name_keyword_id %></td>
+        <td><%= Admin::RubySyntaxNameKeyword.find(admin_ruby_syntax_keyword_description.ruby_syntax_name_keyword_id).name_keyword %></td>
         <td><%= admin_ruby_syntax_keyword_description.num_view %></td>
         <td><%= admin_ruby_syntax_keyword_description.label_description %></td>
         <td><%= admin_ruby_syntax_keyword_description.full_keyword_description %></td>

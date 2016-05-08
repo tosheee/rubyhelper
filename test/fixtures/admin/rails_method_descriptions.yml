@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rails_name_method_id: 1
+  num_view: 1
+  lable_description: MyString
+  full_method_description: MyText
+  label_code: MyString
+  method_code: MyText
+  label_result: MyString
+  result_code: MyText
+
+two:
+  rails_name_method_id: 1
+  num_view: 1
+  lable_description: MyString
+  full_method_description: MyText
+  label_code: MyString
+  method_code: MyText
+  label_result: MyString
+  result_code: MyText

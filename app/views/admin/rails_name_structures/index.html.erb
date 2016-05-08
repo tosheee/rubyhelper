@@ -2,9 +2,12 @@
     <p id="notice"><%= notice %></p>
 
         <div class="heading">
-            <h2>Listing Admin Rails Name Structures</h2>
+            <h4>Listing Admin Rails Name Structures</h4>
+          | <%= link_to ' Methods ', admin_rails_name_methods_path %>
+          | <%= link_to ' Rails Method description ', admin_rails_method_descriptions_path %>
+          | <%= link_to ' New Rails name structure ', new_admin_rails_name_structure_path %>|
         </div>
-    <%= link_to 'New Rails name structure', new_admin_rails_name_structure_path %>
+
 
     <table>
       <thead>

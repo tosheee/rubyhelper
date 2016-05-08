@@ -1,10 +1,13 @@
 <div class="form-index">
 <p id="notice"><%= notice %></p>
     <div class="heading">
-        <h3>Listing Admin Ruby Name Methods</h3>
+      <h4>Listing Admin Ruby Name Methods</h4>
+      |<%= link_to ' Classes ', admin_ruby_name_classes_path %>
+      |<%= link_to ' Keyword Description ', admin_ruby_name_method_full_descriptions_path %>
+      |<%= link_to ' New Ruby name method ', new_admin_ruby_name_method_path %>|
     </div>
 
-  <%= link_to 'New Ruby name method', new_admin_ruby_name_method_path %>
+
   <table>
   <thead>
     <tr>
@@ -18,7 +21,7 @@
   <tbody>
     <% @admin_ruby_name_methods.each do |admin_ruby_name_method| %>
       <tr>
-        <td><%= admin_ruby_name_method.ruby_name_class_id %></td>
+        <td><%= Admin::RubyNameClass.find(admin_ruby_name_method.ruby_name_class_id).name_class%></td>
         <td><%= admin_ruby_name_method.name_method %></td>
         <td><%= admin_ruby_name_method.short_method_description %></td>
         <td><%= link_to 'Show', admin_ruby_name_method %></td>

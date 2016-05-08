@@ -1,9 +1,13 @@
 <div class="form-index">
 <p id="notice"><%= notice %></p>
 
-<h4>Listing Admin Ruby Syntax Name Elements</h4>
+  <div class="heading">
+      <h4>Listing Admin Ruby Syntax Name Elements</h4>
+    |<%= link_to ' Keywords ', admin_ruby_syntax_name_keywords_path %>
+    |<%= link_to ' Keyword Description ', admin_ruby_name_method_full_descriptions_path %>
+    |<%= link_to ' New Ruby syntax name element ', new_admin_ruby_syntax_name_element_path %>|
+  </div>
 
-  <%= link_to 'New Ruby syntax name element', new_admin_ruby_syntax_name_element_path %>
 <table>
   <thead>
     <tr>

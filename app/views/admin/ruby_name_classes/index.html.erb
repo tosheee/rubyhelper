@@ -1,7 +1,12 @@
 <div class="form-index">
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Admin Ruby Name Classes</h1>
+    <div class="heading">
+        <h4>Listing Admin Ruby Name Classes</h4>
+        |<%= link_to ' Methods ', admin_ruby_name_methods_path %>
+        |<%= link_to ' Methods Description ', admin_ruby_name_method_full_descriptions_path %>
+        |<%= link_to ' New Ruby name class ', new_admin_ruby_name_class_path %>|
+    </div>
 
 <table>
   <thead>
@@ -26,6 +31,4 @@
 </table>
 
 <br>
-
-<%= link_to 'New Ruby name class', new_admin_ruby_name_class_path %>
 </div>

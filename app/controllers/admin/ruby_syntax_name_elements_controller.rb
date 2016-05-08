@@ -35,7 +35,7 @@ class Admin::RubySyntaxNameElementsController < ApplicationController
 
   def destroy
     @admin_ruby_syntax_name_element.destroy
-    render action: :index
+    redirect_to action: :index
   end
 
   private

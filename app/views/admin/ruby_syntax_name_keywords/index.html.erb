@@ -1,10 +1,14 @@
 <div class="form-index">
 <p id="notice"><%= notice %></p>
-    <div class="heading">
-        <h3>Listing Admin Ruby Syntax Name Keywords</h3>
-    </div>
 
-  <%= link_to 'New Ruby syntax name keyword', new_admin_ruby_syntax_name_keyword_path %>
+  <div class="heading">
+      <h4>Listing Admin Ruby Syntax Name Keywords</h4>
+      |<%= link_to ' Elements ', admin_ruby_syntax_name_elements_path %>
+      |<%= link_to ' Keyword Description ', admin_ruby_name_method_full_descriptions_path %>
+      |<%= link_to ' New Ruby syntax name keyword ', new_admin_ruby_syntax_name_keyword_path %>|
+  </div>
+
+
 
 <table>
   <thead>
@@ -22,7 +26,7 @@
   <tbody>
     <% @admin_ruby_syntax_name_keywords.each do |admin_ruby_syntax_name_keyword| %>
       <tr>
-        <td><%= admin_ruby_syntax_name_keyword.admin_ruby_suntax_name_element_id %></td>
+        <td><%= Admin::RubySyntaxNameElement.find(admin_ruby_syntax_name_keyword.admin_ruby_suntax_name_element_id).name_element %></td>
         <td><%= admin_ruby_syntax_name_keyword.num_view %></td>
         <td><%= admin_ruby_syntax_name_keyword.name_keyword %></td>
         <td><%= admin_ruby_syntax_name_keyword.name_keyword_description %></td>

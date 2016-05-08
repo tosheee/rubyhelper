@@ -35,7 +35,7 @@ class Admin::RubyNameClassesController < ApplicationController
 
   def destroy
     @admin_ruby_name_class.destroy
-    render action: :index
+    redirect_to action: :index
   end
 
   private

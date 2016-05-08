@@ -19,23 +19,23 @@ class Admin::RailsNameStructuresController < ApplicationController
   def create
     @admin_rails_name_structure = Admin::RailsNameStructure.new(admin_rails_name_structure_params)
     if @admin_rails_name_structure.save
-      redirect_to :index
+      redirect_to action: :index
     else
-      render :new
+      render action: :new
     end
   end
 
   def update
     if @admin_rails_name_structure.update(admin_rails_name_structure_params)
-      redirect_to :index
+      redirect_to action: :index
     else
-      render :edit
+      render action: :edit
     end
   end
 
   def destroy
     @admin_rails_name_structure.destroy
-    redirect_to :index
+    redirect_to action: :index
   end
 
   private

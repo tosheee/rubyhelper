@@ -1,0 +1,60 @@
+<div class="main-content" xmlns="http://www.w3.org/1999/html">
+
+  <div class="left-icons">
+    <%= image_tag("rubyonrails.png", :alt => "alabala") %>
+  </div>
+
+  <div>
+    <p id="heading-syntax"><strong><%= @rails_name_structure.name_structure %></strong></p>
+  </div>
+
+  <div class="nav-vertical">
+    <%= render 'nav_vertical'%>
+  </div>
+
+  <div class="central-main-content">
+    <% @name_methods.each do |method| %>
+        <details>
+
+          <summary><%= method[1] %><p id="keyword-description"><b>Описание: </b><%= method.last%></p></summary>
+
+
+          <% @rails_method_descriptions.each do |method_description| %>
+
+              <% if method.first == method_description.rails_name_method_id %>
+
+                  <% if (!method_description.lable_description.empty?) %>
+                      <h4><%= method_description.lable_description %></h4>
+
+                  <% end %>
+
+                  <% if (!method_description.full_method_description.empty?) %>
+                      <p><%= method_description.full_method_description %></p>
+                  <% end %>
+
+
+                  <% if (!method_description.label_code.empty?) %>
+                      <h4><%= method_description.label_code %></h4>
+                  <% end %>
+
+                  <% if (!method_description.method_code.empty?) %>
+                      <pre><%= method_description.method_code %></pre>
+                  <% end %>
+
+
+                  <% if (!method_description.label_result.empty?) %>
+                      <h4><%= method_description.label_result %></h4>
+                  <% end %>
+
+                  <% if (!method_description.result_code.empty?) %>
+                      <pre><%= method_description.result_code %></pre>
+                  <% end %>
+
+              <% end %>
+          <% end %>
+        </details>
+    <% end %>
+
+  </div>
+
+</div>

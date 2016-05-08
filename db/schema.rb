@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160502153329) do
+ActiveRecord::Schema.define(version: 20160507090848) do
+
+  create_table "admin_rails_method_descriptions", force: :cascade do |t|
+    t.integer  "rails_name_method_id"
+    t.integer  "num_view"
+    t.string   "lable_description"
+    t.text     "full_method_description"
+    t.string   "label_code"
+    t.text     "method_code"
+    t.string   "label_result"
+    t.text     "result_code"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  create_table "admin_rails_name_methods", force: :cascade do |t|
+    t.integer  "rails_name_structure_id"
+    t.string   "name_method"
+    t.text     "short_description"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "admin_rails_name_metods", force: :cascade do |t|
     t.string   "structure_element"

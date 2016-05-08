@@ -1,0 +1,50 @@
+<div class="form-index">
+<p id="notice"><%= notice %></p>
+
+  <div class="heading">
+    <h4>Listing Admin Rails Method Descriptions</h4>
+    | <%= link_to ' Structure ', admin_rails_name_structures_path %>
+    | <%= link_to ' Methods ', admin_rails_name_methods_path %>
+    | <%= link_to ' New Rails method description ', new_admin_rails_method_description_path %> |
+
+  </div>
+
+
+
+  <table>
+  <thead>
+    <tr>
+      <th>Rails name method</th>
+      <th>Num view</th>
+      <th>Lable description</th>
+      <th>Full method description</th>
+      <th>Label code</th>
+      <th>Method code</th>
+      <th>Label result</th>
+      <th>Result code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_rails_method_descriptions.each do |admin_rails_method_description| %>
+      <tr>
+        <td><%= Admin::RailsNameMethod.find(admin_rails_method_description.rails_name_method_id).name_method %></td>
+        <td><%= admin_rails_method_description.num_view %></td>
+        <td><%= admin_rails_method_description.lable_description %></td>
+        <td><%= admin_rails_method_description.full_method_description %></td>
+        <td><%= admin_rails_method_description.label_code %></td>
+        <td><%= admin_rails_method_description.method_code %></td>
+        <td><%= admin_rails_method_description.label_result %></td>
+        <td><%= admin_rails_method_description.result_code %></td>
+        <td><%= link_to 'Show', admin_rails_method_description %></td>
+        <td><%= link_to 'Edit', edit_admin_rails_method_description_path(admin_rails_method_description) %></td>
+        <td><%= link_to 'Destroy', admin_rails_method_description, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+

@@ -1,0 +1,5 @@
+<ul>
+  <% @rails_name_structures.each do |name_structure| %>
+      <li><%= link_to name_structure.name_structure, "/rails_enviroments/#{name_structure.id}" %></li>
+  <% end %>
+</ul>
