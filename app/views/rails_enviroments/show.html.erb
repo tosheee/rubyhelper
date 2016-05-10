@@ -14,10 +14,10 @@
 
   <div class="central-main-content">
     <% @name_methods.each do |method| %>
+        <hr>
         <details>
 
           <summary><%= method[1] %><p id="keyword-description"><b>Описание: </b><%= method.last%></p></summary>
-
 
           <% @rails_method_descriptions.each do |method_description| %>
 
