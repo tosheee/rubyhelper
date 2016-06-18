@@ -30,7 +30,6 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
-  gem 'web-console', '~> 3.3'
 end
 
 group :development do
